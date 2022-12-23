@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .assign {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .assign input {
+      padding: 10px;
+      /* width: 300px; */
+      border: 1px solid #ddd;
+    }
+    .assign input:focus {
+      outline: none;
+      border-color: #ccc;
+    }
+    .assign [title="Current"] {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+    .assign .classes-list,
+    .assign .classes-list-t {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+    @media (max-weidth:626px) {
+      .assign [title="Current"] {
+      width: auto;
+    }
+    .assign .classes-list,
+    .assign .classes-list-t {
+      width: auto;
+
+    }
+    }
+    .assign .classes-list h5,
+    .assign .classes-list-t h5 {
+      margin: 0 0 10px;
+      text-align: left;
+    }
+    .assign .classes-list div span,
+    .assign .classes-list-t div span {
+      background-color: #ff5722;
+      padding: 6px 10px 8px;
+      margin-right: 5px;
+      border-radius: 6px;
+      color: white;
+      display: inline-flex;
+    }
+    .sort {
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      border: 2px solid #ff5722;
+    }
+    .sort:hover {
+      background-color: #ff5722;
+      color: white;
+    }
+    .the-result{
+      font-size: 20px;
+      color: #ff5722;
+    }
+    .add-node{
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #ff5722;
+      color: white;
+      cursor: pointer;
+    }
+    .add-edge{
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #ff5722;
+      color: white;
+      cursor: pointer;
+    }
+    .node{
+      margin-bottom: 10px;
+    }
+    .node label,
+    .edge label{
+      font-size: 11px;
+      color: #ff5722;
+    }
+    .edge input {
+      width: 60px;
+    }
+    @media (max-width:626px) {
+      .node{
+        margin-bottom: 10px;
+    }
+      .node label,
+      .edge label{
+        font-size: 15px;
+        color: #ff5722;
+    }
+      .node{
+        display: flex;
+        flex-flow: row wrap;
+    }
+      .edge {
+        display: flex;
+        flex-flow: column wrap;
+    }
+      .edge input,
+      .edge button {
+        width: 90px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="assign">
+    
+    <div class="node">
+      <label for="one">(Add One Node(Letter), Then Add or Enter) </label>
+      <input
+        id="one"
+        type="text"
+        class="classes-node"
+        placeholder="Add node"/> 
+        <button class="add-node">Add Node</button>
+      </div>
+
+    <div class="edge">
+      <label for="two">(Add Edge(Letter) and Weight(Number), Then Add or Enter) </label>  
+      <input
+        id="two"
+        type="text"
+        class="classes-u"
+        placeholder="u"/>
+      <input
+        type="text"
+        class="classes-v"
+        placeholder="v"/>
+      <input
+        type="number"
+        class="classes-weight"
+        placeholder="weight"/>
+        <button class="add-edge">Add Edge</button>
+    </div>
+
+    <!-- <div class="element current" title="Current">Current Numbers</div> -->
+
+    <div class="classes-list">
+      <h5>Name Of Nodes</h5>
+      <div></div>
+    </div>
+
+    <div class="classes-list-t">
+        <h5>Name Of Edges</h5>
+        <div></div>
+      </div>
+
+    <button class="sort">kruskal's Algorithm</button>
+    
+    <div class="classes-list">
+      <h5>The Result</h5>
+      <h5>EX : ( Node Name --> Ohter Nodes Which Connected )</h5>
+      <div class="the-result"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
